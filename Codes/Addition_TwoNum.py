@@ -80,3 +80,202 @@ num2 = 21
 
 result = add_numbers_recusrisve(num1,num2)
 print("the sum of",num1,"and",num2,"is",result)
+
+
+
+#similarly we can perform subtraction, multiplication and division.
+#providing codes for reference.
+
+
+#we can perform subtraction using above methods:-
+
+#1st method
+num1 = 10
+num2 = 3
+
+sub = num1-num2
+print("the subtraction of {0} and {1} is {2}".format(num1,num2,sub))
+
+#2nd method
+num1 = input("enter first number = ")
+num2 = input("enter second number = ")
+
+sub = float(num1)-float(num2)
+print("the subtraction of {0} and {1} is {2}".format(num1,num2,sub))
+
+#3rd method
+def sub(num1,num2):
+    return num1 - num2
+
+num1 = 34
+num2 = 10
+sub_of_number = sub(num1,num2)
+print("the subtraction of",num1,"and",num2,"is",sub_of_number)
+
+#4th method
+num1 = 40
+num2 = 10
+
+import operator
+sub = operator.sub(num1,num2)
+print("the  subtraction of",num1,"and",num2,"is",sub)
+
+#5th method
+sub_numbers = lambda x,y:x-y
+num1 = 45
+num2 = 20
+
+result = sub_numbers(num1,num2)
+print("the subtraction of",num1,"and",num2,"is",result)
+
+#6th method
+def sub_two_numbers_recursive(x,y):
+    if y==0:
+        return x
+    else:
+        return sub_two_numbers_recursive(x-1,y-1)
+    
+num1 = 33
+num2 = 10
+result = sub_two_numbers_recursive(num1,num2)
+print("the subtraction of",num1,"and",num2,"is",result)
+
+#we can perform multiplication using above methods:-
+
+#1st method
+num1 = 3
+num2 = 4
+
+mul = num1*num2
+print("the multiplication of {0} and {1} is {2}".format(num1,num2,mul))
+
+#2nd method
+
+num1 = input("enter the first number = ")
+num2 = input("enter the second number = ")
+
+mul = float(num1)*float(num2)
+print("the multiplication of {0} and {1} is {2}".format(num1,num2,mul))
+
+#3rd method
+def mul(a,b):
+    return a*b
+num1 = 3
+num2 = 4
+
+result = mul(num1,num2)
+print("the multiplication of",num1,"and",num2,"is",result)
+
+mul_of_numbers = mul(num1,num2)
+print("the multiplication of {0} and {1} is {2}".format(num1,num2,mul_of_numbers))
+
+#4th method
+
+num1 = 2
+num2 = 4
+
+import operator
+result = operator.mul(num1,num2)
+print("the multiplication of",num1,"and",num2,"is",result)
+
+#5th method
+mul_of_number = lambda x,y : x*y
+num1 = 4
+num2 = 5
+
+result = mul_of_number(num1,num2)
+print("the multiplication of",num1,"and",num2,"is",result)
+
+#6th method
+def mul_of_number_recursive(x,y):
+        return x
+
+num1 = 3
+num2 = 3
+result = mul_of_number_recursive(num1,num2)
+print("the multiplication of",num1,"and",num2,"is",result)
+
+
+#another method for same method
+def mul_of_number_recursive(x, y):
+    if y == 0:
+        return 0
+    elif y > 0:
+        return x + mul_of_number_recursive(x, y - 1)
+    else:  # Handling negative values of y
+        return -mul_of_number_recursive(x, -y)
+        
+num1 = 3
+num2 = 3
+result = mul_of_number_recursive(num1, num2)
+print("The multiplication of", num1, "and", num2, "is", result)
+
+
+#we can perform multiplication using above methods:-
+
+#1st method
+num1 = 30
+num2 = 5
+
+div = num1/num2
+print("the Division of {0} and {1} is {2}".format(num1,num2,div))
+
+#2nd method
+
+num1 = input("enter the first number = ")
+num2 = input("enter the second number = ")
+
+div = float(num1)/float(num2)
+print("the division of {0} and {1} is {2}".format(num1,num2,div))
+
+#3rd method
+def div(a,b):
+    return a/b
+num1 = 10
+num2 = 2
+
+result = div(num1,num2)
+print("the division of",num1,"and",num2,"is",result)
+
+div_of_numbers = div(num1,num2)
+print("the division of {0} and {1} is {2}".format(num1,num2,div_of_numbers))
+
+#4th method
+
+num1 = 20
+num2 = 4
+
+import operator
+result = operator.truediv(num1,num2)
+print("the division of",num1,"and",num2,"is",result)
+
+#5th method
+div_of_number = lambda x,y : x/y
+num1 = 40
+num2 = 2
+
+result = div_of_number(num1,num2)
+print("the division of",num1,"and",num2,"is",result)
+
+#6th method
+def div_of_number_recursive(x,y):
+        return x
+num1 = 30
+num2 = 3
+result = div_of_number_recursive(num1,num2)
+print("the division of",num1,"and",num2,"is",result)
+
+
+#another method for same method
+def div_of_number_recursive(x, y):
+    if y == 0:
+        return 0
+    elif y > 0:
+        return x + div_of_number_recursive(x, y - 1)
+    else:  # Handling negative values of y
+        return -div_of_number_recursive(x, -y)
+        
+num1 = 45
+num2 = 3
+result = div_of_number_recursive(num1, num2)
+print("The division of", num1, "and", num2, "is", result)
