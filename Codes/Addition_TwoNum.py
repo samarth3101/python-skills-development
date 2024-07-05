@@ -16,7 +16,7 @@ print("sum of {0} and {1} is {2}".format(num1,num2,sum))
 # in this method the input is taken by the user.
 # here we are taking input as a floating point for ensuring numeric addition, handling decimal number and avoiding type errors.
 num1=input("\nenter first number = ")
-num2=input("enter second number =")
+num2=input("enter second number = ")
 
 sum=float(num1)+float(num2)
 
@@ -196,7 +196,7 @@ result = mul_of_number_recursive(num1,num2)
 print("the multiplication of",num1,"and",num2,"is",result)
 
 
-#another method for same method
+#another method for same
 def mul_of_number_recursive(x, y):
     if y == 0:
         return 0
@@ -211,7 +211,7 @@ result = mul_of_number_recursive(num1, num2)
 print("The multiplication of", num1, "and", num2, "is", result)
 
 
-#we can perform multiplication using above methods:-
+#we can perform division using above methods:-
 
 #1st method
 num1 = 30
@@ -259,7 +259,7 @@ print("the division of",num1,"and",num2,"is",result)
 
 #6th method
 def div_of_number_recursive(x,y):
-        return x
+        return x/y
 num1 = 30
 num2 = 3
 result = div_of_number_recursive(num1,num2)
@@ -268,14 +268,20 @@ print("the division of",num1,"and",num2,"is",result)
 
 #another method for same method
 def div_of_number_recursive(x, y):
-    if y == 0:
-        return 0
-    elif y > 0:
-        return x + div_of_number_recursive(x, y - 1)
-    else:  # Handling negative values of y
-        return -div_of_number_recursive(x, -y)
-        
+  if y == 0:
+      raise ValueError("Division by zero is not allowed")
+
+  def helper(a, b):
+      if a < b:
+          return 0
+      return 1 + helper(a - b, b)
+
+  if x * y < 0:  # If one of them is negative
+      return -helper(abs(x), abs(y))
+  else:
+      return helper(abs(x), abs(y))
+
 num1 = 45
 num2 = 3
 result = div_of_number_recursive(num1, num2)
-print("The division of", num1, "and", num2, "is", result)
+print("The division of", num1, "by", num2, "is", result)
