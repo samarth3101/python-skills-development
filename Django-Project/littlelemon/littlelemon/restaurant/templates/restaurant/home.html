@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Little Lemon - Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'restaurant/styles.css' %}">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header>
+        <img src="{% static 'restaurant/images/lemon.png' %}" alt="Little Lemon">
+        <h1>Welcome to Little Lemon Restaurant</h1>
+        <p class="tagline">"Serving Fresh & Delicious Food with Love!"</p>
+        <button class="cta-button">Explore Our Menu</button>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="{% url 'menu' %}">Menu</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'book' %}">Book</a>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Little Lemon is a family-owned restaurant offering the best organic and locally sourced dishes. We pride ourselves in delivering a delightful dining experience with every meal.</p>
+    </section>
+
+    <!-- Floating Menu Board -->
+    <div class="floating-menu">
+        <h2>Today's Specials</h2>
+        <ul>
+            <li>🍋 Lemon Herb Grilled Chicken</li>
+            <li>🥗 Mediterranean Salad</li>
+            <li>🍝 Italian Pasta with Homemade Sauce</li>
+            <li>🍕 Margherita Pizza</li>
+            <li>🍰 Chocolate Lava Cake</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Little Lemon. All Rights Reserved.</p>
+        <p>&copy; <strong style="color: aqua;">SAMARTH PATIL</strong> - Contact: samarth.patil3101@gmail.com</p>
+    </footer>
+</body>
+</html>

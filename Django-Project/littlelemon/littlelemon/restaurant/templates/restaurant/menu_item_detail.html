@@ -1,0 +1,26 @@
+<h1>{{ item.name }}</h1>
+<p>Price: ${{ item.price }}</p>
+<p>{{ item.description }}</p>
+{% if item.image %}
+    <img src="{{ item.image.url }}" alt="{{ item.name }}">
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>{{ item.name }}</h1>
+    <p>Price: ${{ item.price }}</p>
+    <p>{{ item.description }}</p>
+    {% if item.image %}
+        <img src="{{ item.image.url }}" alt="{{ item.name }}">
+    {% endif %}
+    
+    
+</body>
+</html>
