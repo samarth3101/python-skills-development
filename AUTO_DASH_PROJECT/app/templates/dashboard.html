@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AutoDash - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <section id="dashboard" class="upload-section">
+        <div class="container">
+            <h2>Uploaded Data</h2>
+            <div class="table-container">
+                {{ table | safe }}
+            </div>
+
+            <h3>Data Visualizations</h3>
+            <div class="graph-container">
+                {% for chart in graph_html_blocks %}
+                    <div class="chart-box">
+                        {{ chart|safe }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>

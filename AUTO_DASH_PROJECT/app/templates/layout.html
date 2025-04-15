@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Auto Dash</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar glass fade-in">
+        <div class="navbar-left">
+            <h1 class="logo">AutoDash</h1>
+        </div>
+        <div class="navbar-right">
+            <!-- Update the href links to redirect to the info_page -->
+            <a href="{{ url_for('info_page') }}">About</a>
+            <a href="{{ url_for('info_page') }}">Upload</a>
+            <a href="{{ url_for('info_page') }}">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero fade-in">
+        <div class="hero-content">
+            <h2>Welcome to <span class="highlight">AutoDash</span></h2>
+            <p>Your intelligent dashboard builder powered by AI.</p> 
+            <a  href="#" class="cta-button">Scroll to dive deep</a>
+        </div>
+        <div class="scroll-down"></div>
+    </section>
+
+
+    <!-- Dynamic Page Content -->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Samarth Patil | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
